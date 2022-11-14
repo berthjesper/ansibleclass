@@ -25,4 +25,3 @@
       src: ~/awscliv2.zip
       dest: ~/
       remote_src: true
-    when: awsfile.stat.exists
