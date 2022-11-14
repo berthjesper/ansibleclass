@@ -19,3 +19,10 @@
       dest: ~/awscliv2.zip
       mode: '0700'
     when: not awsfile.stat.exists
+
+  - name: Unzip aws-cli
+    ansible.builtin.unarchive:
+      src: ~/awscliv2.zip
+      dest: ~/
+      remote_src: true
+    when: awsfile.stat.exists
