@@ -11,7 +11,7 @@
 
   - name: Debug awsfile
     ansible.builtin.debug:
-      msg: awsfile
+      msg: "{{ awsfile }}"
 
   - name: Download aws-cli
     ansible.builtin.get_url:
