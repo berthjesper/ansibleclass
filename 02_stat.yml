@@ -12,3 +12,8 @@
   - name: Debug awsfile
     ansible.builtin.debug:
       msg: "{{ awsinstallfile }}"
+
+  - name: Install aws-cli
+    ansible.builtin.shell: |
+      ~/aws/install
+    when: not awsinstallfile.stat.exists
