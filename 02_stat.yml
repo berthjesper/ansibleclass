@@ -8,3 +8,7 @@
     ansible.builtin.stat:
       path: /usr/local/aws-cli
     register: awsinstallfile
+
+  - name: Debug awsfile
+    ansible.builtin.debug:
+      msg: "{{ awsinstallfile }}"
