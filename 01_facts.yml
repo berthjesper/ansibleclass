@@ -17,3 +17,4 @@
   - name: Debug Facts SeLinux Status - Dictionary
     ansible.builtin.debug:
       msg: "{{ ansible_facts['selinux']['status'] }}"
+
