@@ -1,2 +1,1 @@
 # ansibleclass
-1
