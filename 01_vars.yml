@@ -10,4 +10,4 @@
     - name: Install Packages
       ansible.builtin.package:
         name: "{{ package }}"
-        state: 2.4.37
+        state: present
