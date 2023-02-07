@@ -9,9 +9,6 @@
         msg: "{{ ansible_facts['nodename'] }}"
 
     - name: Write File
-      ansible.builtin.blockinfile:
-        path: ~/file2.txt
-        block: "{{ ansible_facts['nodename'] }}"
-        create: true
-        mode: 0600
+      ansible.builtin.shell:
+        shell: "{{ ansible_facts['nodename'] }}"
       delegate_to: localhost
