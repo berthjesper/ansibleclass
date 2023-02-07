@@ -1,0 +1,14 @@
+---
+- name: Task Delegation
+  hosts: linuxservers
+  become: true
+
+  tasks:
+    - name: Debug Facts Hostname
+      ansible.builtin.debug:
+        msg: "{{ ansible_facts['nodename'] }}"
+
+    - name: Write File
+      ansible.builtin.lineinfile:
+        path: ~/file.txt
+        line: "{{ ansible_facts['nodename'] }}"
