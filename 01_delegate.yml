@@ -1,7 +1,6 @@
 ---
 - name: Task Delegation
   hosts: linuxservers
-  become: true
 
   tasks:
     - name: Debug Facts Hostname
@@ -9,6 +8,6 @@
         msg: "{{ ansible_facts['nodename'] }}"
 
     - name: Write File
-      ansible.builtin.shell:
-        shell: "{{ ansible_facts['nodename'] }}"
+      ansible.builtin.command:
+        cmd: ~/ansibleclass/set_server_offline.sh "{{ ansible_facts['nodename'] }}"
       delegate_to: localhost
