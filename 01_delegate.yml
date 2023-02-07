@@ -14,3 +14,5 @@
         line: "{{ ansible_facts['nodename'] }}"
         state: present
         create: true
+        mode: 0600
+      delegate_to: localhost
