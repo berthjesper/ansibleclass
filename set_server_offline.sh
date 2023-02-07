@@ -6,3 +6,5 @@ if [ ! -f "$FILE" ]; then
 fi
 
 echo $1 $2 >> $FILE
+
+echo 0

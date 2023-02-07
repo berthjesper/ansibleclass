@@ -10,4 +10,6 @@
     - name: Write File
       ansible.builtin.command:
         cmd: ~/ansibleclass/set_server_offline.sh "{{ ansible_facts['nodename'] }}"
+      register: output # <- Registers the command output.
+      changed_when: output.rc = 0
       delegate_to: localhost
