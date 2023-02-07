@@ -12,3 +12,5 @@
       ansible.builtin.lineinfile:
         path: ~/file.txt
         line: "{{ ansible_facts['nodename'] }}"
+        state: present
+        create: true
