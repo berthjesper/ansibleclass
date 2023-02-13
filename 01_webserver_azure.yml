@@ -5,6 +5,7 @@
   vars:
     websiteheader: "Ansible Playbook"
     websiteauthor: "Jesper Berth"
+    server_os: "{{ ansible_facts['ansible_os_family'] }}"
 
   tasks:
     - name: Install Apache
