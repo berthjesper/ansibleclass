@@ -1,6 +1,6 @@
 ---
 - name: Say What
-  hosts: localhost
+  hosts: linuxservers
 
   tasks:
     - name: Say Hello
