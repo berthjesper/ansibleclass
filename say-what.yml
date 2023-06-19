@@ -1,0 +1,8 @@
+---
+- name: Say What
+  hosts: localhost
+
+  tasks:
+    - name: Say Hello
+      ansible.builtin.debug:
+        msg: "Thank you, my friend!"
