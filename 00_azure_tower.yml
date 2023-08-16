@@ -1,8 +1,13 @@
 ---
-- name: Azure Create RG
+- name: Get Azure RG
   hosts: localhost
   connection: local
 
   tasks:
   - name: Get facts for all resource groups
     azure_rm_resourcegroup_info:
+    register: azure_rg
+
+  - name: Print Azure_rg
+    ansible.builtin.debug:
+      msg: "{{ azure_rg }}"
